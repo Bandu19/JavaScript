@@ -9,6 +9,8 @@ let a = 10,
 /* HACE EN CONCATENAR LOS DOS VALORES C + D*/
 const saludo = c + d;
 
+c = 'Hola de nuevo';
+
 /*
     TIIPOS DE MENSAJES 
     console.log(x);
