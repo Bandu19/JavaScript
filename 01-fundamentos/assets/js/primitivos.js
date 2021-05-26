@@ -41,13 +41,18 @@ let soyNull = null;
 console.log(typeof soyNull); // Object 
 
 
-
 //SYMBOL
 
 let Symbol1 = Symbol('a');
 let Symbol2 = Symbol('a');
 
 console.log(typeof Symbol1); // symbol
+
+// MANERAS DE PROBAR IF 
+console.log(Symbol1 === Symbol2);
+
+
+
 
 
 
