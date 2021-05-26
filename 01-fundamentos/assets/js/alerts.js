@@ -1,5 +1,5 @@
 //Esta accion bloquea antes de empezar.
-alert('Hola mundo Yasmin');
+alert('Hola Yasmin');
 
 //Esta accion hace que te pregunte y mandes un cierto valor tipo String, 
 //el otro valor Sin nombre significa agregarle un strign extra.
