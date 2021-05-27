@@ -17,3 +17,6 @@ let a = 10,
 const saludo = c + d;
 
 c = 'Hola de nuevo';
+
+const saludo2 = a + c;
+console.log(saludo2);

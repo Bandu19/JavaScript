@@ -23,6 +23,7 @@ let arregloCosas = [
     { a: 1 },
     //OTRO ARREGLO
     ['X', 'Megaman', 'Zero', 'Dr.', 'Light'],
+    //OTRO ARREGLO
     [1, 2, 3, [
         'Willy',
         'Vegeta777'
