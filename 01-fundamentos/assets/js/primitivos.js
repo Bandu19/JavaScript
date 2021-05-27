@@ -32,7 +32,7 @@ console.log(typeof edad); // Number
 edad = 33.001;
 console.log(typeof edad); // Number
 
-
+//CAMEL CASE
 let superPoder;
 console.log(typeof superPoder); // Undefined
 
@@ -48,7 +48,7 @@ let Symbol2 = Symbol('a');
 
 console.log(typeof Symbol1); // symbol
 
-// MANERAS DE PROBAR IF 
+// MANERAS DE PROBAR IF DENTRO DE UNA MENSAJE 
 console.log(Symbol1 === Symbol2);
 
 
