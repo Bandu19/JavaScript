@@ -24,12 +24,11 @@ function ROTn(text, map) {
 
 }
 
-function ROT47(text) {
+function ROT47(text) { //Hola
     var R = new String()
     R = ROTn(text, "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~")
     return R;
 
 
 }
-
-ROT47();
+console.log(ROT47('Niño'));
