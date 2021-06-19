@@ -2,10 +2,10 @@
 
 /*LAS PROPIEDADES DENTRO DEL PERSONAJE
  EL ORDEN EN QUE SE IMPRIME ES DE MANERA ALFABETICA */
-let personaje = {
-    nombre: 'Tony Stark',
-    codeName: 'Iroman',
-    vivo: false,
+const personaje = {
+    nombre: 'Tony Stark', //1
+    codeName: 'Iroman', //2
+    vivo: false, //3
     edad: 40,
     cordenadas: {
         lat: 34.034,
@@ -43,9 +43,37 @@ console.log('Ultima Pelicula:', personaje['ultimapelicula'])
 delete personaje.edad;
 console.log(personaje);
 
+//AGREGAR MAS DE UNA VARIABLE A UN OBJETO
 personaje.casado = true;
 
-// CREAR UN ARREGLO DENTRO DE UNA PROPIEDAD que tiene valores
-
+// CREAR UN ARREGLO DENTRO DE UNA OBJETO que tiene valores
 const entriesPares = Object.entries(personaje)
+console.log('Total de valores del array:', entriesPares.length)
 console.log(entriesPares);
+
+
+//HACER UN BLOQUEO CON EL METODO freeze
+Object.freeze(personaje);
+personaje.dinero = 1000000;
+console.log(personaje);
+
+//ACTIVIDAD
+personaje.cordenadas.lat = 10.10101;
+console.log("-------------------------------");
+console.log(personaje)
+
+//ACTIVIDAD
+console.log("-------------2------------------");
+Object.freeze(personaje.dirreccion)
+personaje.dirreccion.ubicacion = 'MODIFICACIÓN',
+    console.log(personaje);
+
+
+/*LO HACE ESE METODO ES CREAR TU ARRAY DE UNA FORMA 
+BONITA*/
+console.log("-------------------------------");
+const propiedades = Object.getOwnPropertyNames(personaje);
+console.log({ propiedades });
+console.log("-------------------------------");
+const valores = Object.values(personaje);
+console.log(valores);

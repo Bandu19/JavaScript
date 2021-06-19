@@ -26,9 +26,10 @@ function ROTn(text, map) {
 
 function ROT47(text) {
     var R = new String()
-    R = ROTn(text,
-        "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~")
+    R = ROTn(text, "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~")
     return R;
 
 
 }
+
+ROT47();
