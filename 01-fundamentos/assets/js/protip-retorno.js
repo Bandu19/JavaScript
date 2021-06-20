@@ -38,6 +38,8 @@ imprimeArgumentos(10, true, false, 'Oscar', 'Saludo');
 */
 //Por si queremos ocupar otro otro Parametro despues del argumento
 
+
+//PARAMETRO REST(...) dentro de una función.
 const imprimeArgumentos2 = (nombre, ...arguments) => {
     //console.log({ nombre, arguments });
     return arguments;
