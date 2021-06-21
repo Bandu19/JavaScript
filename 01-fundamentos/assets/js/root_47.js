@@ -3,7 +3,7 @@ const Procedimiento = (text, map) => {
     var $i, $j, $c, $len = map.length;
     for ($i = 0; $i < text.length; $i++) {
         $c = text.charAt($i);
-        if ($c == "ñ") {
+        if ($c === "ñ") {
             alert("Se ha detectado una letra Ñ por lo tanto se mostrara como un Rectangulo relleno ©");
             $c = ['©'];
             $j = $c.indexOf($c);
@@ -23,10 +23,7 @@ const Procedimiento = (text, map) => {
 
     }
     return $resul;
-
-
 }
-
 
 const ROT47 = (text) => {
     var $resul = new String();
