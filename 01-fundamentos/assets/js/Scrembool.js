@@ -43,4 +43,4 @@ const Procedimiento = (text, clave) => {
 
 let cadena = prompt('Ingresa la cadena:');
 let clave = prompt('Ingresa la clave');
-console.log("La Palabra desifrada es: ", Procedimiento(cadena, clave));
+console.log("La Cadena es: ", Procedimiento(cadena, clave));
