@@ -20,8 +20,6 @@ const Procedimiento = (text, map) => {
             }
             $resul += $c;
         }
-
-
     }
     return $resul;
 }

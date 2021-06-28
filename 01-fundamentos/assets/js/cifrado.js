@@ -10,14 +10,14 @@ const Procedimiento = (text, map, map2) => {
 
         if (posicion <= 13) {
             alert(`La posición del numero: ${posicion} es menor que 13`);
-            $j = posicion + posicion; //VALOR 14
+            $j = posicion + posicion - posicion; //VALOR 14
             //$j = $c.indexOf($c);
             fila1 = "" + map2.charAt($j);
             $resul += fila1;
 
         } else if (posicion >= 14) {
             alert(`La posición del numero es: ${posicion} es mayor que 14`);
-            $j = (posicion + posicion) / 2;
+            $j = posicion + posicion - posicion;
             fila1 = "" + map2.charAt($j);
             $resul += fila1;
         }
@@ -41,14 +41,14 @@ const Procedimiento2 = (text, map, map2) => {
 
         if (posicion % 2 == 0) {
             alert(`La posición del numero es par: ${posicion}`);
-            $j = posicion / 2;; //VALOR 14
+            $j = posicion + posicion - posicion; //VALOR 14
             //$j = $c.indexOf($c);
             fila1 = "" + map.charAt($j);
             $resul += fila1;
 
         } else {
             alert(`La posición del numero es impar: ${posicion}`);
-            $j = (posicion + posicion) / 2;
+            $j = posicion + posicion - posicion;;
             fila1 = "" + map.charAt($j);
             $resul += fila1;
         }
@@ -61,10 +61,6 @@ const ROT48 = (text) => {
     $resul = Procedimiento2(text, "abcdefghijklmnñopqrstuvwxyz ", 'zyxwvutsrqpoñnmlkjihgfedcba ');
     return $resul;
 }
-
-
-
-
 
 let cadena = prompt('Ingresa la cadena'); //niño
 console.log('La Encriptado es:', ROT47(cadena));
