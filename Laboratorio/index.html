@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand">Navbar</a>
             <form class="d-flex">
@@ -19,13 +19,49 @@
                 <button class="btn btn-outline-success" type="submit" onclick="codificar">Search</button>
             </form>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- <h1>Hola mi amor Yasmin, Buenos Dias</h1>
     <hr>
     <p>TE AMO</p> -->
 
 
+    <header class="titulo">
+        Blackjack
+    </header>
+    <div class="row mt-2">
+        <div class="col text-center">
+            <button class="btn btn-danger">Nuevo juego</button>
+            <button class="btn btn-primary">Pedir Carta</button>
+            <button class="btn btn-primary">Detener</button>
+        </div>
+    </div>
+
+    <div class="row container mt-2">
+        <div class="col">
+            <h1>Jugagor 1 - <small>0</small></h1>
+            <div id="jugador-cartas">
+                <img class="carta" src="assets/cartas/4C.png" alt="carta_1">
+                <img class="carta" src="assets/cartas/10C.png" alt="carta_1">
+                <img class="carta" src="assets/cartas/10S.png" alt="carta_1">
+                <img class="carta" src="assets/cartas/2H.png" alt="carta_1">
+            </div>
+        </div>
+
+    </div>
+    <div class="row container">
+        <div class="col">
+            <h1>Computadora - <small>0</small></h1>
+            <div id="computadora-cartas">
+                <img class="carta" src="assets/cartas/4C.png" alt="carta_1">
+                <img class="carta" src="assets/cartas/10C.png" alt="carta_1">
+                <img class="carta" src="assets/cartas/10S.png" alt="carta_1">
+                <img class="carta" src="assets/cartas/2H.png" alt="carta_1">
+            </div>
+        </div>
+
+    </div>
+    <script src="assets/js/underscore-min.js"></script>
     <script src="assets/js/juego.js"></script>
 </body>
 
