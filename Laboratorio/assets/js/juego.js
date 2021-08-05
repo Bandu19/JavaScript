@@ -11,11 +11,16 @@ let puntosJugador = 0,
     puntosComputadora = 0;
 
 //REFERENCIAS DEL HTML
+
+//querySelector sirve para tomar e identificar ya sea las etiquetas o clases de los div o small etc..
 const btnPedir = document.querySelector('#btnPedir');
 console.log(btnPedir);
 
 const pntJugador = document.querySelectorAll('small');
 console.log(pntJugador);
+
+const divCartasJugador = document.querySelector('#jugador-cartas');
+console.log(divCartasJugador);
 
 
 // Esta funcioón crea un nuevo deck.
@@ -98,10 +103,39 @@ const valorCarta = (carta) => {
 btnPedir.addEventListener('click', function() {
     // console.log('click');
     const carta = pedirCarte();
-
     puntosJugador += valorCarta(carta);
     //EL [0] HACE refecencia a los id = Jugador-cartas;
     //id = computadoras-cartas;
     pntJugador[0].innerText = puntosJugador;
+
+    // <img class="carta" src="assets/cartas/4C.png" alt="carta_1">
+    //Crearemos algo nuevo en la propiedad de IMG (HTML)
+    const imgCarta = document.createElement('img');
+    //NUEVO ELEMENTO
+    imgCarta.src = `assets/cartas/${carta}.png`;
+    //Con esto agarras propiedades ya sea de Boostrap o CSS3
+    imgCarta.classList.add('carta');
+
+    //BOTON DE PEDIR CARTA
+    //append sirve para ingresar carta
+    divCartasJugador.append(imgCarta);
+
+    if (puntosJugador > 21) {
+        console.warn('Lo siento mucho, perdiste');
+        //IMPORTANTE 
+        btnPedir.disabled = true; //esta propiedad hace que desactive tu boton que estas trabajando.
+    } else if (puntosJugador === 21) {
+        console.warn('Ganaste <3, Victoria');
+        btnPedir.disabled = true;
+    }
+
+
+
+
+
+
+
+
+
     console.log(puntosJugador);
 });
