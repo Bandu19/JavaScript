@@ -17,6 +17,8 @@ const btnPedir = document.querySelector('#btnPedir');
 console.log(btnPedir);
 const btnDetener = document.querySelector('#btnDetener');
 console.log(btnDetener);
+const btnNuevo = document.querySelector('#btnNuevo');
+console.log(btnNuevo);
 
 const pntJugador = document.querySelectorAll('small');
 console.log(pntJugador);
@@ -118,9 +120,24 @@ const turnoComputadora = (puntosMinimos) => {
             break;
         }
 
-    } while ((puntosComputadora < puntosMinimos) && (puntosMinimos <= 21)) {
+    } while ((puntosComputadora < puntosMinimos) && (puntosMinimos <= 21));
 
-    }
+    setTimeout(() => {
+        if (puntosComputadora === puntosMinimos) {
+            alert('Nadie Gana :(');
+
+        } else if (puntosMinimos > 21) {
+            alert('La computadora gana');
+
+        } else if (puntosComputadora > 21) {
+            alert('Jugador Gana');
+        } else {
+            alert('Computadora Gana');
+        }
+    }, 10);
+
+
+
 
 
 }
@@ -157,6 +174,7 @@ btnPedir.addEventListener('click', function() {
 
     if (puntosJugador > 21) {
         console.warn('Lo siento mucho, perdiste');
+        alert('Lo siento mucho, perdiste');
         //IMPORTANTE 
         btnPedir.disabled = true; //esta propiedad hace que desactive tu boton que estas trabajando.
         btnDetener.disabled = true;
@@ -183,8 +201,27 @@ btnPedir.addEventListener('click', function() {
 btnDetener.addEventListener('click', () => {
     btnPedir.disabled = true;
     btnDetener.disabled = true;
-
     turnoComputadora(puntosJugador);
+});
+
+
+btnNuevo.addEventListener('click', () => {
+
+    console.clear();
+    deck = [];
+
+    deck = crearDeck();
+    puntosJugador = 0;
+    puntosComputadora = 0;
+    pntJugador[0].innerHTML = 0;
+    pntJugador[1].innerHTML = 0;
+
+    divCartasComputadora.innerHTML = '';
+    divCartasJugador.innerHTML = '';
+
+    btnPedir.disabled = false;
+    btnDetener.disabled = false;
+
 
 
 });
