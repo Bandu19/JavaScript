@@ -7,6 +7,16 @@
 let deck = []; //CREAR UN NUEVO ARREGLO
 const tipos = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K'];
+let puntosJugador = 0,
+    puntosComputadora = 0;
+
+//REFERENCIAS DEL HTML
+const btnPedir = document.querySelector('#btnPedir');
+console.log(btnPedir);
+
+const pntJugador = document.querySelectorAll('small');
+console.log(pntJugador);
+
 
 // Esta funcioón crea un nuevo deck.
 const crearDeck = () => {
@@ -20,6 +30,7 @@ const crearDeck = () => {
             deck.push(i + tipo);
         }
     }
+    //CONCATENAN LOS DOS FOR
     for (let tipo of tipos) {
         for (let especial of especiales) {
             deck.push(especial + tipo);
@@ -43,10 +54,9 @@ const pedirCarte = () => {
             throw 'No hay cartas en el deck';
         }
         const carta = deck.pop();
-        console.log(deck); // EL ORIGINAL DECK
+        // console.log(deck); // EL ORIGINAL DECK
         //LA MODIFICACIÓN DEL DECK
-        console.log(carta); //carta debe ser de la baraja
-
+        // console.log(carta); //carta debe ser de la baraja
         return carta;
     }
     // deck = []; // Limpiar el deck
@@ -79,5 +89,19 @@ const valorCarta = (carta) => {
 
 }
 
-const valor = valorCarta(pedirCarte());
-console.log({ valor });
+// const valor = valorCarta(pedirCarte());
+// console.log({ valor });
+
+
+////////////////////Eventos////////////////////
+//CALLBACK
+btnPedir.addEventListener('click', function() {
+    // console.log('click');
+    const carta = pedirCarte();
+
+    puntosJugador += valorCarta(carta);
+    //EL [0] HACE refecencia a los id = Jugador-cartas;
+    //id = computadoras-cartas;
+    pntJugador[0].innerText = puntosJugador;
+    console.log(puntosJugador);
+});
