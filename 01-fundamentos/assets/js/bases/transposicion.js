@@ -6,9 +6,7 @@ const Procedimiento2 = (text, abecedario, clave) => {
         orden = prompt('Ingresa el orden del cifrado');
         console.log("Letra:" + orden);
 
-
     }
-
 
 }
 
