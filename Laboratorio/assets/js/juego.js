@@ -83,8 +83,6 @@
     for (let i = 0; i < numJugadores; i++) {
       puntosJugadores.push(0);
     }
-
-    console.log({ puntosJugadores });
   };
 
   // Esta función me permite tomar una carta
@@ -125,16 +123,20 @@
     // }
     // console.log(puntos);
   };
-  const acumularPuntos = () => {};
+
+  //turno: 0 = primer jugador y el último será la computadora
+  const acumularPuntos = (carta, turno) => {
+    puntosJugadores[turno] = puntosJugadores[turno] + valorCarta(carta); //2
+    pntJugador[turno].innerHTML = puntosJugadores[turno]; // no afecta
+    return puntosJugadores[turno];
+  };
 
   ////////////////////Turno de la computadora////////////////////
 
   const turnoComputadora = (puntosMinimos) => {
     do {
       const carta = pedirCarte(); //2C
-      puntosComputadora += valorCarta(carta); //2
-      pntJugador[1].innerHTML = puntosComputadora; // no afecta
-
+      acumularPuntos(carta, puntosJugadores.length - 1);
       const imgCarta = document.createElement("img");
       imgCarta.src = `assets/cartas/${carta}.png`;
       imgCarta.classList.add("carta");
@@ -166,10 +168,9 @@
   btnPedir.addEventListener("click", function () {
     // console.log('click');
     const carta = pedirCarte();
-    puntosJugador += valorCarta(carta);
+    const puntosJugador = acumularPuntos(carta, 0);
     //EL [0] HACE refecencia a los id = Jugador-cartas;
     //id = computadoras-cartas;
-    pntJugador[0].innerText = puntosJugador;
 
     // <img class="carta" src="assets/cartas/4C.png" alt="carta_1">
     //Crearemos algo nuevo en la propiedad de IMG (HTML)
@@ -214,8 +215,9 @@
     // deck = [];
     // deck = crearDeck();
 
-    puntosJugador = 0;
-    puntosComputadora = 0;
+    // puntosJugador = 0;
+    // puntosComputadora = 0;
+
     pntJugador[0].innerHTML = 0;
     pntJugador[1].innerHTML = 0;
 
