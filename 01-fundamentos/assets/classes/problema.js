@@ -17,6 +17,7 @@ const pedro = {
     console.log(`Nombre:${this.nombre} - Edad:${this.edad} `);
   },
 };
+
 // fher.imprimir();
 // pedro.imprimir();
 
