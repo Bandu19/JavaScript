@@ -47,6 +47,10 @@ class Persona {
     return `La comida Favorita de ${this.nombre} es ${this.comida} `;
   }
 
+  get getJuegoFavorito() {
+    return `El juego Favorito de ${this.nombre} es ${this.juegos}`;
+  }
+
   /***************************************************************************/
 
   /** Estos Son metodos */
@@ -70,6 +74,7 @@ const spiderman = new Persona(
 );
 
 spiderman.setComidaFavorita = "el pie de cereza de la tía May";
+spiderman.setJuegoFavorito = "El juego del calamar";
 
 /** ESTO NO SE DEBE DE HACER EN JAVASCRIPT
  *
@@ -80,3 +85,5 @@ spiderman.setComidaFavorita = "el pie de cereza de la tía May";
 // CONSOLA
 console.log(spiderman);
 console.log(spiderman.getComidaFavorita);
+
+console.log(spiderman.getJuegoFavorito);
