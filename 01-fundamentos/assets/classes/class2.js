@@ -1,4 +1,17 @@
 class Persona {
+  //Esta es una palabra Reservada
+  static _conteo = 0;
+  /**GETS ESTATICOS */
+  static get conteo() {
+    return Persona._conteo + ` instancias`;
+  }
+
+  /**METODOS  ESTATICOS*/
+  static mensaje() {
+    console.log(this.nombre); // ESTO ESTA MAL, ESTO ME ARROJA undefine
+    console.log("Hola a todos, soy un método estático");
+  }
+
   //ES UN METODO que creera Instancias
   //Estos son Propiedades de clase
   nombre = "";
@@ -23,6 +36,9 @@ class Persona {
     this.codigo = codigo;
     this.frase = frase;
     this.apellido = apellido;
+    //ESE CONTEO LO QUE HACE ES CONTAR LAS CONSTANTES QUE TENGAN LAS CLASE persona()
+    //En otras palabras cuenta el total de las instancias.
+    Persona._conteo++;
   }
 
   /***************************************************************************/
@@ -72,6 +88,7 @@ const spiderman = new Persona(
   "Spiderman",
   "Un gran poder conlleva a una responsabilidad"
 );
+const ironMan = new Persona("Tony Stark", "Spiderman", "I am Ironman");
 
 spiderman.setComidaFavorita = "El pie de cereza de la tía May";
 spiderman.setJuegoFavorito = "El juego del calamar";
@@ -82,8 +99,21 @@ spiderman.setJuegoFavorito = "El juego del calamar";
 // spiderman.nemesis = "Duende Verde";
 // spiderman.comida = "Duende Verde";
 
-// CONSOLA
-console.log(spiderman);
-console.log(spiderman.getComidaFavorita);
+/** CONSOLA */
+// console.log(spiderman);
+// console.log(spiderman.getComidaFavorita);
+// console.log(spiderman.getJuegoFavorito);
 
-console.log(spiderman.getJuegoFavorito);
+console.log("Conteo Estático", Persona._conteo);
+console.log(Persona.conteo);
+
+/**Asi llamamos a los metodos Estaticos */
+Persona.mensaje();
+
+/**Trabajamos la clase como un
+ * objeto literal
+ * ejemplo:
+ */
+Persona.propiedadExterna = "Hola Mundo";
+console.log(Persona.propiedadExterna);
+console.log(Persona);
