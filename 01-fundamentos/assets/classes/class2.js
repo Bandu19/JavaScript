@@ -42,7 +42,7 @@ class Persona {
   /** EL METODO GET
    *
    */
-
+  /**EL GET solo recupera los valores de los argumentos */
   get getComidaFavorita() {
     return `La comida Favorita de ${this.nombre} es ${this.comida} `;
   }
@@ -73,7 +73,7 @@ const spiderman = new Persona(
   "Un gran poder conlleva a una responsabilidad"
 );
 
-spiderman.setComidaFavorita = "el pie de cereza de la tía May";
+spiderman.setComidaFavorita = "El pie de cereza de la tía May";
 spiderman.setJuegoFavorito = "El juego del calamar";
 
 /** ESTO NO SE DEBE DE HACER EN JAVASCRIPT

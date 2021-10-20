@@ -55,7 +55,9 @@ const spiderman = new Persona(
 const wife = new Persona("Yasmin Sori", "19", "Te vas a Morir Prro.");
 const husBand = new Persona("Oscar Gustavo", "-", "-", "Sostenes");
 
-/** MENSAJES EN CONSOLA */
+/** MENSAJES EN CONSOLA
+ * .
+ */
 console.log(batMan);
 console.log(spiderman);
 console.log(husBand);

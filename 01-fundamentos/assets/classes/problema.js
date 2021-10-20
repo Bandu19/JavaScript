@@ -1,6 +1,7 @@
 /** 71.- PROBLEMATICA Y NECESIDAD DE CLASES
  *
  */
+//Objeto literal
 const fher = {
   nombre: "Fernando",
   edad: 30,
