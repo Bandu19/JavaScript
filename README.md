@@ -10,7 +10,7 @@ FUNDAMENTOS DE JAVASCRIPT
 - [x] Sección 4: Ciclo y estructuras de control.
 - [x] Sección 5: Laboratorio 1 - Blackjack.
 - [x] Sección 6: Patrón módulo y optimizadores.
-- [ ] Sección 7: Clases en JavaScript y ESNext private properties.
+- [x] Sección 7: Clases en JavaScript y ESNext private properties.
 - [ ] Sección 8: Módulos y Webpack.
 - [ ] Sección 9: Despliegue a Github y Github pages.
 - [ ] Sección 10: Laboratorio 2: Aplicación de lista de tareas.
