@@ -67,7 +67,7 @@ class Heroe extends Persona {
   queinSoy() {
     console.log(`Soy ${this.nombre}, ${this.clan}`);
     /**
-     * Aqui llamare al metodo HEROE de la clase Persona
+     * Aqui llamare al metodo quienSoy de la clase Persona
      */
     super.queinSoy();
   }
