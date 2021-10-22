@@ -24,9 +24,9 @@ class Persona {
   }
 }
 
-const nombre1 = "Melissa",
-  apellido1 = "Flores",
-  pais1 = "Honduras";
+const nombre1 = "Oscar",
+  apellido1 = "Acuña",
+  pais1 = "Sóstenes";
 
 //objeto literal
 
