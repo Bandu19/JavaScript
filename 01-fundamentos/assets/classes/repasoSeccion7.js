@@ -141,37 +141,3 @@ console.log(compañero);
 compañero.datosUsuarios();
 
 // console.log("Estatico Get:", compañero.getDatosGenerales);
-console.log(
-  "--------------------REPASO 4--------------------------------------"
-);
-
-class Personas5 {
-  static proObjeto({ palabra1, palabra2, palabra3 }) {
-    return new Personas5(palabra1, palabra2, palabra3);
-  }
-
-  constructor(palabra1, palabra2, palabra3) {
-    this.palabra1 = palabra1;
-    this.palabra2 = palabra2;
-    this.palabra3 = palabra3;
-  }
-
-  getinfo() {
-    console.log(`${this.palabra1},${this.palabra2},${this.palabra3}`);
-  }
-}
-
-const Yas = {
-  ln: "TE",
-  ln2: "QUIERO",
-  ln3: "PULGA",
-};
-const min = {
-  fr: "TE",
-  fr2: "EXTRAÑO",
-  fr3: "HERMOSA UwU",
-};
-
-const frase = Personas5.proObjeto(Yas);
-
-frase.getinfo();

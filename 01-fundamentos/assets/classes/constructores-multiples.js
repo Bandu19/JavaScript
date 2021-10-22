@@ -29,6 +29,9 @@ const nombre1 = "Oscar",
   pais1 = "Sóstenes";
 
 //objeto literal
+/** TIENEN QUE TENER LAS MISMAS VARIABLES
+ * que las de la INSTANCIA de la CLASE
+ */
 
 const Yas = {
   nombre: "Yasmin",
