@@ -4,8 +4,15 @@
   "description": "Este es un cascaron de un proyecto de webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Oscar Acuña",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "html-loader": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1"
+  }
 }
