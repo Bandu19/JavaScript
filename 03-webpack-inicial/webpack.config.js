@@ -26,6 +26,13 @@ module.exports = {
           minimize: false,
         },
       },
+      /**
+       * CONFIGURACION DE LA IMPORTACION PARA CSS a JS
+       */
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   plugins: [
