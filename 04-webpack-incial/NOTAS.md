@@ -33,7 +33,7 @@ Para la desisntalación de **nodejs** junto con **_npm_** se requiere con el sig
 
 #
 
-### INSTALAR WEBPACK SERVER
+### **INSTALAR WEBPACK SERVER**
 
 Cabe mencionar que para instalar webpack-server nececitamos del siguiente comando
 
@@ -65,6 +65,25 @@ Una vez configurado el **_webpack.js_**, ya cargando sus dependencias como Html-
 ![Eliminando la carpeta dist](../04-webpack-incial/Evidencia/eliminarCarpetaDist.png)
 
 #
+
+### **Webpack Deb Server**
+
+Para instalar webpack Server (**dependencia de desarrollo**) se utiliza el siguiente comando:
+
+- **npm i -D webpack-dev-server**
+
+Ahora una vez instalado el webpack Server se nececita configurar tu **package.json** de la siguiente forma:
+
+![WebpackServer](./Evidencia/webpack.png)
+
+**_Nota_: El comando start sirve para hechar andar codigo back y lo que estamos trabajando es front.**
+
+- **--open:** Para que este listo y este montado el servidor y lo abra automaticamente
+- **--port=(N°Puerto)** Puerto para que puedas abrir otra aplicación como 8081, etc.
+
+Luego para ejecutar el webpackServer ingresamos de esta forma el comando:
+
+![TerminalWebpackServer](./Evidencia/terminalWebServer.png)
 
 #
 

@@ -17,11 +17,11 @@ module.exports = {
         /**Desconosco */
         options: {
           sources: false,
-          minimize: true, //reducción del codigo
         },
       },
     ],
   },
+
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
