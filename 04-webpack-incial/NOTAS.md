@@ -87,38 +87,43 @@ Luego para ejecutar el webpackServer ingresamos de esta forma el comando:
 
 #
 
-#
-
-### INSTALAR CSS-LOADER
-
-Cabe mencionar que para instalar css-loader nececitamos del comando
-
-CODIGO:
-
-### npm i -D css-loader
-
-### i se refiere a install
-
-### -D se refiere a --save-dev
-
-RESULTADO
-"style-loader": "^3.3.1"(versión)
+## Importación de CSS a Webpack
 
 #
 
-### INSTALAR CSS-LOADER
+### **INSTALAR CSS-LOADER**
 
-Cabe mencionar que para instalar style-loader nececitamos del comando
+Cabe mencionar que para instalar css-loader nececitamos del siguiente comando
 
-CODIGO:
+**CODIGO**:
 
-### npm i -D style-loader
+- **npm i -D css-loader**
 
-### i se refiere a install
+- **_i_ se refiere a install**
 
-### -D se refiere a --save-dev
+- **-D se refiere a --save-dev**
 
-RESULTADO
-"css-loader": "^6.5.0"(versión)
+#
+
+### **INSTALAR CSS-LOADER**
+
+Cabe mencionar que para instalar style-loader nececitamos del siguiente comando:
+
+**CODIGO:**
+
+- **npm i -D style-loader**
+
+- **_i_ se refiere a install**
+
+- **-D se refiere a --save-dev**
+
+#
+
+**_Nota:_** Para instalar juntos el **_css-loader_** y el **_style-loader_**
+agregamos como la siguiente imagen:
+
+![css-loader style](./Evidencia/css-loader.png)
+
+#
 
 #

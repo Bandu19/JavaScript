@@ -1,3 +1,5 @@
+import "../css/componentes.css";
+
 /**
  * "export" es para mandar a llamar una función tipo flecha
  * a otra ruta donde esta la manda a llamar.
