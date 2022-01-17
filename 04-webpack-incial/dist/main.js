@@ -40,6 +40,16 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 
 /***/ }),
 
+/***/ "./src/styles.css":
+/*!************************!*\
+  !*** ./src/styles.css ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack-inicial/./src/styles.css?");
+
+/***/ }),
+
 /***/ "./src/css/componentes.css":
 /*!*********************************!*\
   !*** ./src/css/componentes.css ***!
@@ -116,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_componentes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/componentes */ \"./src/js/componentes.js\");\n\n\nconst nombre = \"Oscar\";\n\n(0,_js_componentes__WEBPACK_IMPORTED_MODULE_0__.saludar)(nombre);\n\n\n//# sourceURL=webpack://webpack-inicial/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_componentes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/componentes */ \"./src/js/componentes.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\nconst nombre = \"Oscar\";\n\n(0,_js_componentes__WEBPACK_IMPORTED_MODULE_0__.saludar)(nombre);\n\n\n//# sourceURL=webpack://webpack-inicial/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"saludar\": () => (/* binding */ saludar)\n/* harmony export */ });\n/* harmony import */ var _css_componentes_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/componentes.css */ \"./src/css/componentes.css\");\n\n\n/**\n * \"export\" es para mandar a llamar una función tipo flecha\n * a otra ruta donde esta la manda a llamar.\n */\nconst saludar = (nombre) => {\n  console.log(\"Creando etiqueta h1\");\n\n  const h1 = document.createElement(\"h1\");\n  const h2 = document.createElement(\"h2\");\n\n  h1.innerHTML = `Hola, ${nombre}`;\n  h2.innerHTML = `Clase 89 Webpack Dev Server(${nombre})`;\n  document.body.append(h1);\n  document.body.append(h2);\n};\n\n\n//# sourceURL=webpack://webpack-inicial/./src/js/componentes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"saludar\": () => (/* binding */ saludar)\n/* harmony export */ });\n/* harmony import */ var _css_componentes_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/componentes.css */ \"./src/css/componentes.css\");\n\n// import webpacklogo from \"../assets/img/webpack-logo(1).png\";\n/**\n * \"export\" es para mandar a llamar una función tipo flecha\n * a otra ruta donde esta la manda a llamar.\n */\nconst saludar = (nombre) => {\n  console.log(\"Creando etiqueta h1\");\n\n  const h1 = document.createElement(\"h1\");\n  const h2 = document.createElement(\"h2\");\n\n  h1.innerHTML = `Hola, ${nombre}`;\n  h2.innerHTML = `Clase 89 Webpack Dev Server(${nombre})`;\n  document.body.append(h1);\n  document.body.append(h2);\n\n  //IMG\n  // console.log(webpacklogo);\n  // const img = document.createElement(\"img\");\n  // img.src = webpacklogo;\n  // document.body.append(img);\n};\n\n\n//# sourceURL=webpack://webpack-inicial/./src/js/componentes.js?");
 
 /***/ })
 

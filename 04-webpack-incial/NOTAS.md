@@ -1,12 +1,12 @@
 #
 
-### **Instalación NODEJS (Linux)**
+## **Instalación NODEJS (Linux)**
 
 - [Link del Repositorio GitHub](https://github.com/nodesource/distributions/blob/master/README.md)
 
 #
 
-### **Instalación desde FEDORA**
+## **Instalación desde FEDORA**
 
 Para en caso de _fedora_ solo se nececita copiar y pegar el link(**se recomienda checar el repositorio por situaciones de actualización**):
 
@@ -27,13 +27,13 @@ Para la desisntalación de **nodejs** junto con **_npm_** se requiere con el sig
 
 #
 
-### **Creación de proyecto NodeJs**
+## **Creación de proyecto NodeJs**
 
 - **npm init**
 
 #
 
-### **INSTALAR WEBPACK SERVER**
+## **INSTALAR WEBPACK SERVER**
 
 Cabe mencionar que para instalar webpack-server nececitamos del siguiente comando
 
@@ -48,7 +48,7 @@ RESULTADO
 
 #
 
-### **Instalando Html-loader** y **Html-webpack-plugin**
+## **Instalando Html-loader** y **Html-webpack-plugin**
 
 Para la instalación de estos paquetes permiten hacer dos cosas, una es mover el HTML y el otro permite incrustar automaticamente el boundo en el index (Checar clase 87 JavaScript)
 
@@ -66,7 +66,7 @@ Una vez configurado el **_webpack.js_**, ya cargando sus dependencias como Html-
 
 #
 
-### **Webpack Deb Server**
+## **Webpack Deb Server**
 
 Para instalar webpack Server (**dependencia de desarrollo**) se utiliza el siguiente comando:
 
@@ -91,7 +91,7 @@ Luego para ejecutar el webpackServer ingresamos de esta forma el comando:
 
 #
 
-### **INSTALAR CSS-LOADER**
+## **INSTALAR CSS-LOADER**
 
 Cabe mencionar que para instalar css-loader nececitamos del siguiente comando
 
@@ -105,7 +105,7 @@ Cabe mencionar que para instalar css-loader nececitamos del siguiente comando
 
 #
 
-### **INSTALAR CSS-LOADER**
+## **INSTALAR CSS-LOADER**
 
 Cabe mencionar que para instalar style-loader nececitamos del siguiente comando:
 
@@ -117,13 +117,58 @@ Cabe mencionar que para instalar style-loader nececitamos del siguiente comando:
 
 - **-D se refiere a --save-dev**
 
-#
-
 **_Nota:_** Para instalar juntos el **_css-loader_** y el **_style-loader_**
 agregamos como la siguiente imagen:
 
 ![css-loader style](./Evidencia/css-loader.png)
 
 #
+
+## Creando un archivo de estilos de forma global en la aplicación
+
+Esta dependencia hace que puedas trabajar con un archivo tipo css dentro de la carpeta original **src/css/** y tambien agregarlo a la carpeta **dist/** como por ejemplo:
+
+- ![Ejmeplo](./Evidencia/cssStyless.png)
+
+EL codigo de instalación que utilizaremos es :
+
+- **npm install --save-dev mini-css-extract-plugin**
+
+Ademas se tiene que configurar el **webpack.config.js** de la siguiente manera
+
+![s](./Evidencia/css_plugin_1.png)
+
+![s](./Evidencia/css_plugin_2.png)
+
+![s](./Evidencia/css_plugin_3.png)
+
+Y despues importamos en el **index.js** el styles.css:
+![styles_index.js](./Evidencia/css_plugin_4.png)
+
+#
+
+## Manejo de imagenes
+
+Esta sección habla acerca de instalar un plugin de webpack para trabajar con imaganes.
+
+Antes de hacer este proceso en el ejemplo anterior en la carpeta **_SRC_** vamos a crear una carpeta llamada **_assets_** y dentro de ella creamos la carpeta **_img_** y dentro de esta ingresamos una imagen:
+
+- ![file-loader](./Evidencia/file-loader.png)
+
+Una vez hecho esto importamos la imagen al **componentes.js** como se muestra en la sigueinte imagen:
+
+![file-loader2](./Evidencia/file-loader_2.png)
+
+Luego antes de ejecutar tenemos que instalar el **plugin** como se muestra a continuación:
+
+-**$ npm install file-loader --save-dev**.
+
+o tambien:
+
+-**$ npm i -D file-loader**.
+
+Luego de esa instalación a la hora de ejecutar el servidor de tu proyecto se mostrara a continuación:
+
+![file-loader3](./Evidencia/file-loader_3.png)
 
 #
