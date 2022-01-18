@@ -210,12 +210,14 @@ Una vez hecho esto importamos la imagen al **componentes.js** como se muestra en
 Luego antes de ejecutar tenemos que instalar el **plugin** como se muestra a continuación:
 
 ```
-$ npm install file-loader --save-dev**.
+$ npm install file-loader --save-dev
 ```
 
 o tambien:
 
--**$ npm i -D file-loader**.
+```
+$ npm i -D file-loader
+```
 
 Despues iniciamos con la configuración de nuestro **webpack.config.js**:
 
