@@ -95,6 +95,8 @@ Luego para ejecutar el webpackServer ingresamos de esta forma el comando:
 
 Cabe mencionar que para instalar css-loader nececitamos del siguiente comando
 
+**_(Repasar Clase 90)_**
+
 **CODIGO**:
 
 - **npm i -D css-loader**
@@ -122,6 +124,12 @@ agregamos como la siguiente imagen:
 
 ![css-loader style](./Evidencia/css-loader.png)
 
+**Link de los Plugins:**
+
+- [style-loader](https://webpack.js.org/loaders/style-loader/)
+
+- [css-loader](https://webpack.js.org/loaders/css-loader/)
+
 #
 
 ## Creando un archivo de estilos de forma global en la aplicación
@@ -144,6 +152,10 @@ Ademas se tiene que configurar el **webpack.config.js** de la siguiente manera
 
 Y despues importamos en el **index.js** el styles.css:
 ![styles_index.js](./Evidencia/css_plugin_4.png)
+
+**Link del Plugin:**
+
+- [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/#runtime)
 
 #
 
@@ -177,6 +189,10 @@ Luego de esa instalación a la hora de ejecutar el servidor de tu proyecto se mo
 
 ![file-loader3](./Evidencia/file-loader_3.png)
 
+**Link del plugin:**
+
+- [file-loader](https://v4.webpack.js.org/loaders/file-loader/#getting-started)
+
 #
 
 ## Copy Plugin - CopyWebpackPlugin
@@ -186,5 +202,39 @@ Para instalar este plugin ingresamos el siguiente comando:
 -$**npm i -D copy-webpack-plugin**
 
 Mucho ojo para este plugin al menos para recordar bien este paso es necesario recordad el **video 93** pero basicamente este ejemplo se utilizo para ingresar una imagen dentro de la carpeta **_dist_**.
+
+**Link del plugin:**
+
+- [CopyWebpackPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/)
+
+#
+
+## Webpack - Production Mode
+
+En este capitulo hay dos cosas diferentes, una es que anteriormente el programa esta en modo de **desarrollo** y se cambiara a **producción**. Luego de ello se hace un par de configuraciones en el **webpack.prod.js** y en el **package.json**:
+
+![Production_Mode](./Evidencia/Production_Mode.png)
+
+**_Nota:_** Se creo otra **build:dev** para que en la terminal puedas escoger el programa en modo de desarrollo ya que el otro el **build** sea establecido como modo de producción.
+
+![Production_Mode1](./Evidencia/Production_Mode2.png)
+
+**_Nota:_** En la parte de mode se cambia a "production" porque se refiere comunmente a la producción de la aplicación y en la sección de **output** se le agrega **_filename_** mas su configuración. **Contenthash** hace que el nombre del main.js cambie su nombre.
+
+Ahora en este capitulo se ocupa se instala dos plugin, esto con el fin de limpiar codigo **_CSS_** y sea rapido y sencillo como se vera a continuación.
+
+- **npm i -D css-minimizer-webpack-plugin terser-webpack-plugin**
+
+Luego en seguida hacemos esto en la configuración siguiente en **webpack.prod.js** para ocupar estos plugins.
+
+- ![Production_Mode1](./Evidencia/Production_Mode3.png)
+
+- ![Production_Mode1](./Evidencia/Production_Mode4.png)
+
+**Link de la ducumentación de los dos plugins.**
+
+- [CssMinimizerWebpackPlugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/)
+
+- [TerserWebpackPlugin](https://webpack.js.org/plugins/terser-webpack-plugin/)
 
 #
