@@ -11,6 +11,7 @@
   "author": "Oscar Acuña",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "html-loader": "^3.0.1",

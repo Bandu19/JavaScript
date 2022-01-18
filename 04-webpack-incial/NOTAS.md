@@ -167,8 +167,24 @@ o tambien:
 
 -**$ npm i -D file-loader**.
 
+Despues iniciamos con la configuración de nuestro **webpack.config.js**:
+
+![file-loader4](./Evidencia/file-loader_4.png)
+
+**Nota:** _**Dentro del contenido test se refiere que puede aprobar cualquier imagen que se le indica en este caso acepta imagenes tipo png, jpg y gif.**_
+
 Luego de esa instalación a la hora de ejecutar el servidor de tu proyecto se mostrara a continuación:
 
 ![file-loader3](./Evidencia/file-loader_3.png)
+
+#
+
+## Copy Plugin - CopyWebpackPlugin
+
+Para instalar este plugin ingresamos el siguiente comando:
+
+-$**npm i -D copy-webpack-plugin**
+
+Mucho ojo para este plugin al menos para recordar bien este paso es necesario recordad el **video 93** pero basicamente este ejemplo se utilizo para ingresar una imagen dentro de la carpeta **_dist_**.
 
 #
