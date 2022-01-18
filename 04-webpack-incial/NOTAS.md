@@ -238,3 +238,34 @@ Luego en seguida hacemos esto en la configuración siguiente en **webpack.prod.j
 - [TerserWebpackPlugin](https://webpack.js.org/plugins/terser-webpack-plugin/)
 
 #
+
+## Instalación y configuración de Babel
+
+Babel su funcion asi de simple es hacer que tu codigo de JavaScript sea compatible con viejas versiones de navegadores y estas puedan trabajar sin ningun problema.
+
+Link de la Descripción:
+
+- [Babel](https://babeljs.io/)
+
+### Instalación:
+
+- **npm install --save-dev babel-loader @babel/core**
+
+o tambien:
+
+- **npm i -D babel-loader @babel/core**
+
+Luego se instala otro plugin de **babel**.
+
+- **npm install @babel/preset-env --save-dev**
+
+**_nota:_** _Esto se tiene que checar en el link de la pagina porque luego llega cambiar ciertas cosas._
+
+Terminando de instalar estos plugins se tiene que crear en el archivo Raiz un archivo llamado **babel.config.json** y se inserta este codigo.
+
+- ![Babel_Configuration](./Evidencia/Babel_Configuration.png)
+
+Y los resultados son comprobar tu codigo en un navegador viejo como Internet Exploret
+.
+
+#
