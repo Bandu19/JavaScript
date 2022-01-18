@@ -10,11 +10,16 @@
 
 Para en caso de _fedora_ solo se nececita copiar y pegar el link(**se recomienda checar el repositorio por situaciones de actualización**):
 
-- _curl -fsSL https://rpm.nodesource.com/setup_17.x | bash -_
+```
+ _curl -fsSL https://rpm.nodesource.com/setup_17.x | bash -_
+
+```
 
 El link lo escribes dentro de la terminal con el superusuario **root**. y ejecutas el siguiente comando:
 
-- sudo dnf install nodejs
+```
+$ sudo dnf install nodejs
+```
 
 Compruebas con **_node --version_** y te aparecera la version que quiere decir que se instalo de forma exitosa.
 Tambien se tiene que verificar la version del **npm** y es lo mismo como el anterior comando: **_npm --version_**.
@@ -23,13 +28,31 @@ Tambien se tiene que verificar la version del **npm** y es lo mismo como el ante
 
 Para la desisntalación de **nodejs** junto con **_npm_** se requiere con el siguiente comando
 
-- **_sudo dnf remove nodejs_**
+```
+$ sudo dnf remove nodejs
+```
 
 #
 
 ## **Creación de proyecto NodeJs**
 
-- **npm init**
+```
+$ npm init
+```
+
+### Notas:
+
+Para reconstruir los modulos de Node **(node_modules)**. Utilizamos el siguiente comando:
+
+```
+$ npm install
+```
+
+Y para construir el build, o ejecutar el proyecto:
+
+```
+$ npm run build
+```
 
 #
 
@@ -37,9 +60,11 @@ Para la desisntalación de **nodejs** junto con **_npm_** se requiere con el sig
 
 Cabe mencionar que para instalar webpack-server nececitamos del siguiente comando
 
-### CODIGO:
+### **CODIGO**:
 
-- ### **npm i -D webpack-dev-server**
+```
+$ npm i -D webpack-dev-server
+```
 
 Lo que significa **-D se refiere a --save-dev**
 
@@ -52,7 +77,9 @@ RESULTADO
 
 Para la instalación de estos paquetes permiten hacer dos cosas, una es mover el HTML y el otro permite incrustar automaticamente el boundo en el index (Checar clase 87 JavaScript)
 
-- **npm i -D html-loader html-webpack-plugin**
+```
+$ npm i -D html-loader html-webpack-plugin
+```
 
 ![Instalación de las dos dependencias](../04-webpack-incial/Evidencia/html-loader.png)
 
@@ -70,7 +97,9 @@ Una vez configurado el **_webpack.js_**, ya cargando sus dependencias como Html-
 
 Para instalar webpack Server (**dependencia de desarrollo**) se utiliza el siguiente comando:
 
-- **npm i -D webpack-dev-server**
+```
+npm i -D webpack-dev-server
+```
 
 Ahora una vez instalado el webpack Server se nececita configurar tu **package.json** de la siguiente forma:
 
@@ -99,7 +128,9 @@ Cabe mencionar que para instalar css-loader nececitamos del siguiente comando
 
 **CODIGO**:
 
-- **npm i -D css-loader**
+```
+$ npm i -D css-loader
+```
 
 - **_i_ se refiere a install**
 
@@ -113,7 +144,9 @@ Cabe mencionar que para instalar style-loader nececitamos del siguiente comando:
 
 **CODIGO:**
 
-- **npm i -D style-loader**
+```
+$ npm i -D style-loader
+```
 
 - **_i_ se refiere a install**
 
@@ -140,7 +173,9 @@ Esta dependencia hace que puedas trabajar con un archivo tipo css dentro de la c
 
 EL codigo de instalación que utilizaremos es :
 
-- **npm install --save-dev mini-css-extract-plugin**
+```
+$ npm install --save-dev mini-css-extract-plugin
+```
 
 Ademas se tiene que configurar el **webpack.config.js** de la siguiente manera
 
@@ -151,6 +186,7 @@ Ademas se tiene que configurar el **webpack.config.js** de la siguiente manera
 ![s](./Evidencia/css_plugin_3.png)
 
 Y despues importamos en el **index.js** el styles.css:
+
 ![styles_index.js](./Evidencia/css_plugin_4.png)
 
 **Link del Plugin:**
@@ -173,7 +209,9 @@ Una vez hecho esto importamos la imagen al **componentes.js** como se muestra en
 
 Luego antes de ejecutar tenemos que instalar el **plugin** como se muestra a continuación:
 
--**$ npm install file-loader --save-dev**.
+```
+$ npm install file-loader --save-dev**.
+```
 
 o tambien:
 
@@ -199,7 +237,9 @@ Luego de esa instalación a la hora de ejecutar el servidor de tu proyecto se mo
 
 Para instalar este plugin ingresamos el siguiente comando:
 
--$**npm i -D copy-webpack-plugin**
+```
+$ npm i -D copy-webpack-plugin
+```
 
 Mucho ojo para este plugin al menos para recordar bien este paso es necesario recordad el **video 93** pero basicamente este ejemplo se utilizo para ingresar una imagen dentro de la carpeta **_dist_**.
 
@@ -223,7 +263,9 @@ En este capitulo hay dos cosas diferentes, una es que anteriormente el programa 
 
 Ahora en este capitulo se ocupa se instala dos plugin, esto con el fin de limpiar codigo **_CSS_** y sea rapido y sencillo como se vera a continuación.
 
-- **npm i -D css-minimizer-webpack-plugin terser-webpack-plugin**
+```
+$ npm i -D css-minimizer-webpack-plugin terser-webpack-plugin
+```
 
 Luego en seguida hacemos esto en la configuración siguiente en **webpack.prod.js** para ocupar estos plugins.
 
@@ -249,15 +291,21 @@ Link de la Descripción:
 
 ### Instalación:
 
-- **npm install --save-dev babel-loader @babel/core**
+```
+$ npm install --save-dev babel-loader @babel/core
+```
 
 o tambien:
 
-- **npm i -D babel-loader @babel/core**
+```
+$ npm i -D babel-loader @babel/core
+```
 
 Luego se instala otro plugin de **babel**.
 
-- **npm install @babel/preset-env --save-dev**
+```
+$ npm install @babel/preset-env --save-dev
+```
 
 **_nota:_** _Esto se tiene que checar en el link de la pagina porque luego llega cambiar ciertas cosas._
 
