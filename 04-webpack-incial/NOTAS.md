@@ -144,7 +144,7 @@ $ npm i -D css-loader
 
 #
 
-## **INSTALAR CSS-LOADER**
+## **INSTALAR STYLE-LOADER**
 
 Cabe mencionar que para instalar style-loader nececitamos del siguiente comando:
 
@@ -163,6 +163,10 @@ agregamos como la siguiente imagen:
 
 ![css-loader style](./Evidencia/css-loader.png)
 
+## Configuración de los plugins y su uso:
+
+![ccs-loader style](./Evidencia/Css-loader_Style-loader.png)
+
 **Link de los Plugins:**
 
 - [style-loader](https://webpack.js.org/loaders/style-loader/)
@@ -173,7 +177,7 @@ agregamos como la siguiente imagen:
 
 ## Creando un archivo de estilos de forma global en la aplicación
 
-Esta dependencia hace que puedas trabajar con un archivo tipo css dentro de la carpeta original **src/css/** y tambien agregarlo a la carpeta **dist/** como por ejemplo:
+Esta plugin hace que puedas trabajar con un archivo tipo css dentro de la carpeta original **src/css/** y tambien agregarlo a la carpeta **dist/** como por ejemplo:
 
 - ![Ejmeplo](./Evidencia/cssStyless.png)
 
@@ -254,6 +258,18 @@ Mucho ojo para este plugin al menos para recordar bien este paso es necesario re
 **Link del plugin:**
 
 - [CopyWebpackPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/)
+
+**Finalización de la configuración**
+
+**_HTML original_**
+
+![copy_plugin](./Evidencia/copy_plugin2.png)
+
+**_*Configuración en el archivo webpack.prod.js*_**
+
+- ![copy_plugin](./Evidencia/copy_plugin3.png)
+
+![copy_plugin](./Evidencia/copyplugin.png)
 
 #
 
