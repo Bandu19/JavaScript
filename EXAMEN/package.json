@@ -1,15 +1,15 @@
 {
-  "name": "03-webpack-inicial",
+  "name": "examen",
   "version": "1.0.0",
-  "description": "Repaso de un proyecto de webpack",
+  "description": "Examen de todo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.prod.js --open --port=8080"
+    "start": "webpack serve --config webpack.prod.js --open --port=9090"
   },
-  "author": "Oscar Acuña",
+  "author": "OSCAR ACUÑA",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.10",
