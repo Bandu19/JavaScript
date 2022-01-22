@@ -5,15 +5,16 @@ import "./styles.css";
  * del archivo /src/classes/index.js
  */
 import { Todo, TodoList } from "./classes";
-
+import { crearTodoHtml } from "./js/componentes";
+/**ESTA VARIABLE LLAMA todo lo que tiene
+ * la clase */
 const todoList = new TodoList();
 
-//
 const tarea = new Todo("Aprender JavaScrip");
-const tarea2 = new Todo("Comprar un unicornio");
-// console.log(tarea);
 
 todoList.nuevoTodo(tarea);
-todoList.nuevoTodo(tarea2);
 
-console.log(todoList);
+console.log("ARREGLO:", todoList);
+console.log("RESULTADO2:", tarea);
+
+crearTodoHtml(tarea);
