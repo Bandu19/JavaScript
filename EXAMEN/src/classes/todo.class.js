@@ -1,3 +1,12 @@
+//MANDAR A LLAMAR LOS VALORES
+
+// EL PROCESO DE LA PAGINA (PARTE 1)
+
+/**
+ * Punto donde se estara guardando
+ * la información.
+ *
+ */
 export class Todo {
   constructor(tarea) {
     this.tarea = tarea;

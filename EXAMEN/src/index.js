@@ -1,17 +1,19 @@
+//ESTE ES EL MAS IMPORTANTE DE LA RAMA
 import "./styles.css";
-import { imagen, saludar } from "./js/componentes";
-import { saludar2 } from "./js/componentes";
+/**
+ * Aqui llamamoss a las importaciones
+ * del archivo /src/classes/index.js
+ */
+import { Todo, TodoList } from "./classes";
 
-import { Todo } from "./classes/todo.class";
+const todoList = new TodoList();
 
-// const nombre = "OSCAR";
-// const nombre2 = "GUSTAVO";
-// const nombre3 = "ACUÑA";
-
-// saludar(nombre);
-// saludar2(nombre2);
-// imagen(nombre3);
-
+//
 const tarea = new Todo("Aprender JavaScrip");
+const tarea2 = new Todo("Comprar un unicornio");
+// console.log(tarea);
 
-console.log(tarea);
+todoList.nuevoTodo(tarea);
+todoList.nuevoTodo(tarea2);
+
+console.log(todoList);
