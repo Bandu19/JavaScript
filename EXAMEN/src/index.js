@@ -6,9 +6,10 @@ import "./styles.css";
  */
 import { Todo, TodoList } from "./classes";
 import { crearTodoHtml } from "./js/componentes";
+
 /**ESTA VARIABLE LLAMA todo lo que tiene
  * la clase */
-const todoList = new TodoList();
+export const todoList = new TodoList();
 
 const tarea = new Todo("Aprender JavaScrip");
 

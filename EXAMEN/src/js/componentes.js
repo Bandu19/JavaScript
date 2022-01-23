@@ -1,6 +1,9 @@
+import { Todo } from "../classes";
+import { todoList } from "../index";
 // Referencias en el HTML
 
 const divTodoList = document.querySelector(".todo-list");
+const txtInput = document.querySelector(".new-todo");
 
 export const crearTodoHtml = (todo) => {
   /** Esto es una creación tipo String */
@@ -31,3 +34,34 @@ export const crearTodoHtml = (todo) => {
 
   return div.firstElementChild;
 };
+
+// Eventos
+/**
+ * Evento que se escuchara es "keyup"
+ * es decir cuando la persona suelta la tecla
+ * y cuando la suelta la tecla
+ *
+ * va disparar una accion que son las llaves
+ * {}
+ *
+ *
+ * El "event" va decir que tecla presiono
+ * el usuario.
+ */
+
+txtInput.addEventListener("keyup", (event) => {
+  // console.log(event);
+
+  if (event.keyCode === 13 && txtInput.value.length > 0) {
+    // console.log("Entro");
+    console.log(txtInput.value); //LETRA
+    // console.log(txtInput.value.length); // N° Total de las letras
+    const nuevoTodo = new Todo(txtInput.value);
+    // console.log("obejeto", nuevoTodo);
+    // todoList.nuevoTodo(nuevoTodo);
+    // console.log(todoList);
+
+    crearTodoHtml(nuevoTodo);
+    txtInput.value = "";
+  }
+});
