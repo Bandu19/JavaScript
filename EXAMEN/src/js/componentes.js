@@ -19,7 +19,14 @@ export const crearTodoHtml = (todo) => {
 
   const div = document.createElement("div");
   div.innerHTML = htmlTodo;
-
+  /**Esto es con la finalidad de que
+   * el firstElementChild imprima su hijo
+   * y el padre no se inserte en el html
+   * es decir que el hijo(li) se imprimira
+   * todo lo que tiene pero el padre se
+   * imprimira tambien pero no se visualizara
+   *
+   */
   divTodoList.append(div.firstElementChild);
 
   return div.firstElementChild;

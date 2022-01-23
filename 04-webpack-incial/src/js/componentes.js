@@ -1,23 +1,23 @@
-import "../css/componentes.css";
-// import webpacklogo from "../assets/img/webpack-logo(1).png";
-/**
- * "export" es para mandar a llamar una función tipo flecha
- * a otra ruta donde esta la manda a llamar.
- */
-export const saludar = (nombre) => {
-  console.log("Creando etiqueta h1");
+// Referencia en el HTML
+const divTodoList = document.querySelector(".todo-list");
 
-  const h1 = document.createElement("h1");
-  const h2 = document.createElement("h2");
+export const crearTodoHtml = (todo) => {
+  const htmlTodo = `
+  <li class="${todo.completado ? "completed" : ""}" data-id="abc">
+      <div class="view">
+        <input class="toggle" type="checkbox" ${
+          todo.completado ? "checked" : ""
+        }>
+        <label>${todo.tarea}</label>
+        <button class="destroy"></button>
+      </div>
+      <input class="edit" value="Create a TodoMVC template">
+  </li> `;
 
-  h1.innerHTML = `Hola, ${nombre}`;
-  h2.innerHTML = `Clase 89 Webpack Dev Server(${nombre})`;
-  document.body.append(h1);
-  document.body.append(h2);
+  const div = document.createElement("div");
+  div.innerHTML = htmlTodo;
 
-  //IMG
-  // console.log(webpacklogo);
-  // const img = document.createElement("img");
-  // img.src = webpacklogo;
-  // document.body.append(img);
+  divTodoList.append(div.firstElementChild);
+
+  return div.firstElementChild;
 };
