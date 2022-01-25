@@ -13,7 +13,18 @@ export class TodoList {
 
   elmininarTodo(id) {}
 
-  marcarCompletado(id) {}
+  marcarCompletado(id) {
+    for (const todo of this.todos) {
+      console.log(id, todo.id);
+
+      //si el id es igual al this.todos
+      if (todo.id == id) {
+        // FALSE        =  TRUE
+        todo.completado = !todo.completado;
+        break;
+      }
+    }
+  }
 
   eliminarCompletados() {}
 }
