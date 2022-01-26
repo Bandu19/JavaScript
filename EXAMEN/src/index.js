@@ -19,3 +19,12 @@ console.log("ARREGLO:", todoList);
 console.log("RESULTADO2:", tarea);
 
 crearTodoHtml(tarea);
+
+// LocalStorage y SessionsStorage
+
+// localStorage.setItem("mi-key", "ABC123");
+// sessionStorage.setItem("mi-key", "ABC123");
+
+// setTimeout(() => {
+//   localStorage.removeItem("mi-key");
+// }, 1500);
