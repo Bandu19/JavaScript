@@ -123,6 +123,7 @@ divTodoList.addEventListener("click", (event) => {
 btnBorrar.addEventListener("click", () => {
   //aqui se envia a la clase TodoList
   todoList.eliminarCompletados();
+  console.log("R2:", todoList);
 
   for (let i = divTodoList.children.length - 1; i >= 0; i--) {
     const elemento = divTodoList.children[i];

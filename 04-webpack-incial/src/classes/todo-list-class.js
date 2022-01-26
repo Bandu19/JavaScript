@@ -10,7 +10,7 @@ export class TodoList {
   }
 
   eliminarTodo(id) {
-    this.todo = this.todos.filter((todo) => todo.id != id);
+    this.todos = this.todos.filter((todo) => todo.id != id);
   }
 
   //A LA PAR
@@ -23,5 +23,7 @@ export class TodoList {
     }
   }
 
-  eliminarCompletados() {}
+  eliminarCompletados() {
+    this.todos = this.todos.filter((todo) => !todo.completado);
+  }
 }
