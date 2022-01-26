@@ -11,14 +11,16 @@ import { crearTodoHtml } from "./js/componentes";
  * la clase */
 export const todoList = new TodoList();
 
-const tarea = new Todo("Aprender JavaScrip");
+todoList.todos.forEach((todo) => crearTodoHtml(todo));
 
-todoList.nuevoTodo(tarea);
+// const tarea = new Todo("Aprender JavaScrip");
 
-console.log("ARREGLO:", todoList);
-console.log("RESULTADO2:", tarea);
+// todoList.nuevoTodo(tarea);
 
-crearTodoHtml(tarea);
+// console.log("ARREGLO:", todoList);
+// console.log("RESULTADO2:", tarea);
+
+// crearTodoHtml(tarea);
 
 // LocalStorage y SessionsStorage
 
