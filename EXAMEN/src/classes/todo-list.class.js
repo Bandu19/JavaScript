@@ -11,13 +11,18 @@ export class TodoList {
     this.todos.push(todo);
   }
 
-  elmininarTodo(id) {}
+  elmininarTodo(id) {
+    //Todo eso va regresar una nuevo arreglo
+    this.todos = this.todos.filter((todo) => todo.id != id);
+  }
 
   marcarCompletado(id) {
+    //SACAMOS EL ID de cada palabra
     for (const todo of this.todos) {
-      console.log(id, todo.id);
+      console.log("Clase todo-list:", id, todo.id);
 
       //si el id es igual al this.todos
+      //si es igual al numero:
       if (todo.id == id) {
         // FALSE        =  TRUE
         todo.completado = !todo.completado;

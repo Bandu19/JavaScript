@@ -100,10 +100,18 @@ divTodoList.addEventListener("click", (event) => {
   // Ajustes del input
   // click en el check
   if (nombreElemento.includes("input")) {
+    //aqui le mandamos un string en la clase "todo-list.class.js"
     todoList.marcarCompletado(todoId);
     // Hacer referencia a todas las clases
     // con "classList".
     todoElemento.classList.toggle("completed");
+    /**
+     *
+     */
+  } else if (nombreElemento.includes("button")) {
+    //Hay que borrar el Todo
+    todoList.elmininarTodo(todoId);
+    divTodoList.removeChild(todoElemento); //removeChild
   }
 
   console.log("R:", todoList);
