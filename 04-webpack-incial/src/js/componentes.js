@@ -45,5 +45,11 @@ divTodoList.addEventListener("click", (event) => {
   if (nombreElemento.includes("input")) {
     todoList.marcarCompletado(todoId);
     todoElemento.classList.toggle("completed");
+  } else if (nombreElemento.includes("button")) {
+    // Aqui se elimina el arreglo
+    todoList.eliminarTodo(todoId);
+
+    // Aqui se vacia el input
+    divTodoList.removeChild(todoElemento);
   }
 });

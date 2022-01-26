@@ -9,7 +9,9 @@ export class TodoList {
     this.todos.push(todo);
   }
 
-  eliminarTodo(id) {}
+  eliminarTodo(id) {
+    this.todo = this.todos.filter((todo) => todo.id != id);
+  }
 
   //A LA PAR
   marcarCompletado(id) {
