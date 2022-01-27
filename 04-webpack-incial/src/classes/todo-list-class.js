@@ -1,5 +1,7 @@
 // EL PROCESO DE LA PAGINA (PARTE 2)
 
+import { Todo } from "./todo.class";
+
 export class TodoList {
   constructor() {
     // this.todos = [];
@@ -58,5 +60,7 @@ export class TodoList {
     } else {
       this.todos = [];
     }
+
+    this.todos = this.todos.map((obj) => Todo.fromJson(obj));
   }
 }

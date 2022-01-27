@@ -22,3 +22,7 @@ import { crearTodoHtml } from "./js/componentes";
 export const todoList = new TodoList(); //Muy importante
 
 todoList.todos.forEach((todo) => crearTodoHtml(todo));
+
+todoList.todos[0].imprimirClase();
+
+console.log("todos:", todoList.todos);
