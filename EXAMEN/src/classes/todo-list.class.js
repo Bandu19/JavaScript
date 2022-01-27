@@ -1,5 +1,7 @@
 // EL PROCESO DE LA PAGINA (PARTE 2)
 
+import { Todo } from ".";
+
 export class TodoList {
   constructor() {
     //Un arreglo vacio
@@ -57,5 +59,8 @@ export class TodoList {
     this.todos = localStorage.getItem("todo")
       ? JSON.parse(localStorage.getItem("todo"))
       : [];
+
+    // Metodo de todos los arreglos
+    this.todos = this.todos.map((obj) => Todo.fromJason(obj)); // retorna un nuevo Arreglo
   }
 }
