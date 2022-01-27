@@ -9,7 +9,7 @@
  */
 export class Todo {
   // Crear una nueva Instancia
-  static fromJason({ id, tarea, completado, creado }) {
+  static fromJson({ id, tarea, completado, creado }) {
     // const tempTodo = new Todo(obj.tarea); //CREA UNA NUEVA INSTANCIA
     const tempTodo = new Todo(tarea);
     tempTodo.id = id;

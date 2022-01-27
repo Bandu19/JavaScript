@@ -5,6 +5,8 @@ import { todoList } from "../index";
 const divTodoList = document.querySelector(".todo-list");
 const txtInput = document.querySelector(".new-todo");
 const btnBorrar = document.querySelector(".clear-completed");
+const ulFiltros = document.querySelector(".filters");
+const anchoFiltros = document.querySelectorAll(".filtro"); // VAMOS a preguntar por este filtro
 
 export const crearTodoHtml = (todo) => {
   /** Esto es una creación tipo String */
@@ -131,6 +133,56 @@ btnBorrar.addEventListener("click", () => {
     // Si ese elemento tiene una clase = "completed"
     if (elemento.classList.contains("completed")) {
       divTodoList.removeChild(elemento);
+    }
+  }
+});
+
+ulFiltros.addEventListener("click", (event) => {
+  console.log(event.target.text);
+  const filtro = event.target.text;
+
+  // Si el filtro tiene algo
+
+  //  ESTE SIRVE PARA QUE NO DEVUELVA NADA un divTodoList.children
+  if (!filtro) {
+    return;
+  }
+
+  // Contiene una Clase HTML
+  anchoFiltros.forEach((elem) => elem.classList.remove("selected")); // CLASE HTML
+  console.log(event.target);
+
+  event.target.classList.add("selected");
+
+  for (const elemento of divTodoList.children) {
+    // console.log(elemento);
+
+    // Esto es para los "Completados"
+    // En caso de que no cumpla con los switch(condición)
+    // removera la clase hidden
+    elemento.classList.remove("hidden");
+
+    // el contains es para referirse si tiene la clase completed
+    const completado = elemento.classList.contains("completed");
+
+    // Si quiero mostrar los completados o no
+
+    // En filtro te llegara ya sea "Pendientes", "Completados"
+    switch (filtro) {
+      case "Pendientes": // SI ENCUENTRA Pendientes
+        // a todos los elementos que no estan completados
+        // FALSE
+        if (completado) {
+          elemento.classList.add("hidden");
+        }
+        break;
+      case "Completados":
+        // A todos los elementos que estan completados
+        // TRUE
+        if (!completado) {
+          elemento.classList.add("hidden");
+        }
+        break;
     }
   }
 });

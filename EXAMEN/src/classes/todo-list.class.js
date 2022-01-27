@@ -61,6 +61,6 @@ export class TodoList {
       : [];
 
     // Metodo de todos los arreglos
-    this.todos = this.todos.map((obj) => Todo.fromJason(obj)); // retorna un nuevo Arreglo
+    this.todos = this.todos.map((obj) => Todo.fromJson(obj)); // retorna un nuevo Arreglo
   }
 }
