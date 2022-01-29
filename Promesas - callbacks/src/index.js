@@ -1,13 +1,35 @@
 import "./styles.css";
-import { bucarHeroe } from "./js/callbacks";
+import { bucarHeroe, buscarVillano } from "./js/callbacks";
 
 const heroeId = "capi";
 
-//-----> CLASE-123 <-----
+const villanoId = "tanos";
+
+// CLASE 124. Argumentos estandar de los callbacks
 
 // llamar una función
-bucarHeroe(heroeId, (heroe) => {
-  console.log("1:", heroe);
+//--------/1-VALOR /2-valor(/1-VALOR/-2-valor)
+bucarHeroe(heroeId, (err, heroe) => {
+  /**
+   * Su valor
+   * err = `No existe un heroe con el id:${id}`
+   *
+   *
+   * heroe = callback(null, heroe);
+   * */
+  if (err) {
+    console.error(err);
+  } else {
+    console.info(heroe);
+  }
 });
 
 console.log("Fin de programa");
+
+buscarVillano(villanoId, (err, villano) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(villano);
+  }
+});

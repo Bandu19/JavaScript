@@ -13,9 +13,34 @@ const heroes = {
   },
 };
 
+const villanos = {
+  venom: {
+    nombre: "Edik bruck",
+    poder: "Comedia",
+  },
+  tanos: {
+    nombre: "El titan loco",
+    poder: "Gemas del infinito",
+  },
+};
+
 // El callback retorna ...
 export const bucarHeroe = (id, callback) => {
   const heroe = heroes[id];
-  // El callback es solo una simple funcion
-  callback(heroe);
+  if (heroe) {
+    // En caso de que lo encuentre
+    callback(null, heroe);
+  } else {
+    // Un error ...
+    callback(`No existe un heroe con el id:${id}`);
+  }
+};
+
+export const buscarVillano = (id, callback) => {
+  const villano = villanos[id];
+  if (villano) {
+    callback(null, villano);
+  } else {
+    callback(`No se encontro el id de villano:${id}`);
+  }
 };
