@@ -13,7 +13,7 @@ FUNDAMENTOS DE JAVASCRIPT
 - [x] Sección 7: Clases en JavaScript y ESNext private properties.
 - [x] Sección 8: Módulos y Webpack.
 - [x] Sección 9: Despliegue a Github y Github pages.
-- [ ] Sección 10: Laboratorio 2: Aplicación de lista de tareas.
+- [x] Sección 10: Laboratorio 2: Aplicación de lista de tareas.
 - [ ] Sección 11: Callbacks y Promesas.
 - [ ] Sección 12: Peticiones HTTP y subida de archivos.
 - [ ] Sección 13: Despedida del curso.
