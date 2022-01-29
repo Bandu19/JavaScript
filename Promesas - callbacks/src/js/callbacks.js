@@ -22,6 +22,10 @@ const villanos = {
     nombre: "El titan loco",
     poder: "Gemas del infinito",
   },
+  modok: {
+    nombre: "El cabezas",
+    poder: "telepatia",
+  },
 };
 
 // El callback retorna ...
