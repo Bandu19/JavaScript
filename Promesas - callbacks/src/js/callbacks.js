@@ -29,7 +29,7 @@ const villanos = {
 };
 
 // El callback retorna ...
-export const bucarHeroe = (id, callback) => {
+export const buscarHeroe = (id, callback) => {
   const heroe = heroes[id];
   if (heroe) {
     // En caso de que lo encuentre
