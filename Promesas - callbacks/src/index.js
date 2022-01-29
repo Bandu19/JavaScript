@@ -9,7 +9,8 @@ const heroeId2 = "iron";
 const villanoId = "venom";
 const villanoId2 = "modok";
 
-/**  CLASE 125. Callback Hell
+/**
+ * --------->CLASE 125. Callback Hell<--------
  *  llamar una función
  *-----/1-VALOR /2-valor(/1-VALOR/-2-valor)
  *
@@ -47,6 +48,30 @@ buscarHeroe(heroeId2).then((variable) => {
     `Nombre: ${variable.nombre}
      Poder: ${variable.poder}`
   );
+  console.log(`--------------------------------------------`);
+});
+
+/**
+ * -------------------> CLASE 127 <------------------
+ * 
+ 
+     buscarHeroe(heroeId).then((v1) => {
+     console.info(`Enviando a ${v1.nombre}`);
+    buscarHeroe(heroeId2).then((v2) => {
+        console.info(`Enviando a ${v1.nombre} y ${v2.nombre}`);
+    });
+    });
+*/
+// DESESTRUCTURACIÓN DE UN ARREGLO COMO UN ARGUMENTO A UNA FUNCION
+Promise.all([buscarHeroe(heroeId), buscarHeroe(heroeId2)]).then(
+  ([heroe1, heroe2]) => {
+    console.info(`Enviando a ${heroe1.nombre} y ${heroe2.nombre}`);
+  }
+);
+
+//ESTO ES UN ARREGLO CON promesas
+Promise.all([buscarHeroe(heroeId), buscarHeroe(heroeId2)]).then((heroes) => {
+  console.info(`Enviando a ${heroes[0].poder} y ${heroes[1].poder}`);
 });
 
 console.log("Fin de programa");
