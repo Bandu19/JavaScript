@@ -14,9 +14,9 @@ FUNDAMENTOS DE JAVASCRIPT
 - [x] Sección 8: Módulos y Webpack.
 - [x] Sección 9: Despliegue a Github y Github pages.
 - [x] Sección 10: Laboratorio 2: Aplicación de lista de tareas.
-- [ ] Sección 11: Callbacks y Promesas.
-- [ ] Sección 12: Peticiones HTTP y subida de archivos.
-- [ ] Sección 13: Despedida del curso.
+- [x] Sección 11: Callbacks y Promesas.
+- [x] Sección 12: Peticiones HTTP y subida de archivos.
+- [x] Sección 13: Despedida del curso.
 
 #
 
